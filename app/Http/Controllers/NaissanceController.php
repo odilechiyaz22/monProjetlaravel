@@ -37,7 +37,29 @@ class NaissanceController extends Controller
      */
     public function store(Request $request)
     {
+        var_dump($request->input('sexe'));
         $naissance=new Naissance();
+        $naissance->nom=$request->input('nom');
+        $naissance->postnom=$request->input('postnom');
+        $naissance->prenom=$request->input('prenom');
+        $naissance->sexe=$request->input('sexe');
+        $naissance->lieu=$request->input('lieu');
+        $naissance->dateN=$request->input('dateN');
+        $naissance->prenom_pere=$request->input('prenom_pere');  
+        $naissance->date_pere=$request->input('date_pere');
+        $naissance->lieu_pere=$request->input('lieu_pere');
+        $naissance->profession_pere=$request->input('profession_pere');
+        $naissance->domicile_pere=$request->input('domicile_pere');
+        $naissance->prenom_mere=$request->input('prenom_mere');  
+        $naissance->date_mere=$request->input('date_mere');
+        $naissance->lieu_mere=$request->input('lieu_mere');
+        $naissance->profession_mere=$request->input('profession_mere');
+        $naissance->domicile_mere=$request->input('domicile_mere');
+        $naissance->tiers_declarant=$request->input('tiers_declarant'); 
+        $naissance->evenements_relatifs=$request->input('evenements_relatifs');
+
+        $naissance->save();
+        return redirect('/');
     }
 
     /**
