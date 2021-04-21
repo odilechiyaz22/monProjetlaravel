@@ -61,7 +61,7 @@
       <div class="container">
         <div class="az-content-body">
           <div class="row row-sm mg-b-20 mg-lg-b-0">
-            @include('newnouveaunee')
+            @include('listenouveaunee')
           </div><!-- row -->
         </div><!-- az-content-body -->
       </div>
