@@ -15,7 +15,7 @@ class NaissanceController extends Controller
      */
     public function index()
     {
-        $Naissances=Naissance::all();
+        $Naissances=Naissance::all()->sortByDesc('created_at');
         return view('welcome',['naissances'=>$Naissances,'layout'=>'index']);
     }
 
