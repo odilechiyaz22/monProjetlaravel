@@ -61,7 +61,11 @@
       <div class="container">
         <div class="az-content-body">
           <div class="row row-sm mg-b-20 mg-lg-b-0">
-            @include('listenouveaunee')
+            @if($layout=='index')
+              @include('listenouveaunee')
+            @elseif($layout=='create')
+              @include('newnouveaunee')
+            @endif
           </div><!-- row -->
         </div><!-- az-content-body -->
       </div>

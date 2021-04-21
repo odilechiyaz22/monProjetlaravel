@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Naissance;
+use Illuminate\View\View;
 
 class NaissanceController extends Controller
 {
@@ -13,7 +15,8 @@ class NaissanceController extends Controller
      */
     public function index()
     {
-        //
+        $Naissances=Naissance::all();
+        return view('welcome',['naissances'=>$Naissances,'layout'=>'index']);
     }
 
     /**
@@ -23,7 +26,7 @@ class NaissanceController extends Controller
      */
     public function create()
     {
-        //
+        return view('welcome',['layout'=>'create']);
     }
 
     /**
@@ -34,7 +37,7 @@ class NaissanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $naissance=new Naissance();
     }
 
     /**
