@@ -14,48 +14,50 @@
                       </tr>
                       <tr>
                         <th>Nom</th>
-                        <th>Postnom</th>
-                        <th>Prénom</th>
-                        <th>Sexe</th>
-                        <th>Lieu</th>
-                        <th>Date</th>
-                        <th>Prénom & Nom</th>
-                        <th>Lieu</th>
-                        <th>Date</th>
-                        <th>Profession</th>
-                        <th>Domicile</th>
-                        <th>Prénom & Nom</th>
-                        <th>Lieu</th>
-                        <th>Date</th>
-                        <th>Profession</th>
-                        <th>Domicile</th>
-                        <th>Tiers Declarant</th>
-                        <th>Evenements relatifs</th>
-                        <th>Date fiche</th>
+                        <th>&nbsp;Postnom</th>
+                        <th>&nbsp;Prénom</th>
+                        <th>&nbsp;Sexe</th>
+                        <th>&nbsp;Lieu</th>
+                        <th>&nbsp;Date</th>
+                        <th>&nbsp;&nbsp;Prénom & Nom</th>
+                        <th>&nbsp;Lieu</th>
+                        <th>&nbsp;Date</th>
+                        <th>&nbsp;Profession</th>
+                        <th>&nbsp;Domicile</th>
+                        <th>&nbsp;&nbsp; Prénom & Nom</th>
+                        <th>&nbsp;Lieu</th>
+                        <th>&nbsp;Date</th>
+                        <th>&nbsp;Profession</th>
+                        <th>&nbsp;Domicile</th>
+                        <th>&nbsp; Tiers Declarant</th>
+                        <th>&nbsp;Evenements relatifs</th>
+                        <th>&nbsp;Date fiche</th>
                       </tr>
                     </thead>
                     <tbody>
+                    @foreach($naissances as $n)
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$n->nom}}</td>
+                        <td>&nbsp; {{$n->postnom}}</td>
+                        <td>&nbsp; {{$n->prenom}}</td>
+                        <td>&nbsp; {{$n->sexe}}</td>
+                        <td>&nbsp; {{$n->lieu}}</td>
+                        <td>&nbsp; {{$n->dateN}}</td>
+                        <td>&nbsp;&nbsp; {{$n->prenom_pere}}</td>
+                        <td>&nbsp; {{$n->lieu_pere}}</td>
+                        <td>&nbsp; {{$n->date_pere}}</td>
+                        <td>&nbsp; {{$n->profession_pere}}</td>
+                        <td>&nbsp; {{$n->domicile_pere}}</td>
+                        <td>&nbsp;&nbsp; {{$n->prenom_mere}}</td>
+                        <td>&nbsp;{{$n->lieu_mere}}</td>
+                        <td>&nbsp;{{$n->date_mere}}</td>
+                        <td>&nbsp;{{$n->profession_mere}}</td>
+                        <td>&nbsp;{{$n->domicile_mere}}</td>
+                        <td>&nbsp;&nbsp; {{$n->tiers_declarant}}</td>
+                        <td>&nbsp;{{$n->evenements_relatifs}}</td>
+                        <td>&nbsp;{{$n->created_at}}</td>
                       </tr>
+                    @endforeach
                     </tbody>
                   </table>
                 </div><!-- table-responsive -->
