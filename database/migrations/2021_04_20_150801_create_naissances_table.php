@@ -20,14 +20,12 @@ class CreateNaissancesTable extends Migration
             $table->string('prenom');
             $table->string('sexe');
             $table->string('lieu');
-            $table->string('date');
-            $table->string('nom_pere');
+            $table->string('dateN');
             $table->string('prenom_pere');  
             $table->string('date_pere');
             $table->string('lieu_pere');
-            $table->string('profession');
-            $table->string('domicile');
-            $table->string('nom_mere');
+            $table->string('profession_pere');
+            $table->string('domicile_pere');
             $table->string('prenom_mere');  
             $table->string('date_mere');
             $table->string('lieu_mere');
